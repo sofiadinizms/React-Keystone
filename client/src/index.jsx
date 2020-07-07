@@ -5,7 +5,7 @@ import '.\\style.css'
 import {
   Menu,
   Header,
-  Footer
+  Footer,
 } from '.\\components';
 
 

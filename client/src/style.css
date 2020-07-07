@@ -1,7 +1,7 @@
-.app{
+.app, body{
     background-color: #E5E5E5;
-    height: 875px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100vh;
 }

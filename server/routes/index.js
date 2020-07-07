@@ -18,7 +18,7 @@ module.exports = (app) => {
     });
   });
 
-  app.get('/api/item', (req, res) => {
+  app.get('/api/items', (req, res) => {
     Item.model.find((err, items) => {
       if (err) return res.apiError('database error', err);
       res.send(items);

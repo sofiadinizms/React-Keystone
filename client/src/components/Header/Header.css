@@ -1,13 +1,13 @@
 .Header{
     width: 1400px;
     margin-bottom: 100px;
+    height: 100px;
     
 }
 
 .Header img{
     margin-left: 50px;
     max-height: 100px;
-    height: 100%;
     max-width: 380px;
     width: 100%;
 }

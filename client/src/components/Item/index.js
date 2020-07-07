@@ -1,3 +1,3 @@
-import ItemCardapio from './Item';
+import ItemCardapio from '.\\Item';
 
 export default ItemCardapio;

@@ -6,17 +6,16 @@ function ItemCardapio(props) {
   return (
     <div className="Item">
       <div className="itemImage">
-        <img src={props.image} alt="Imagem do produto"/>
+        <img src={props.image.url} alt="Imagem do produto"/>
       </div>
       <div className="ItemInfo">
         <h2>{props.title}</h2>
         <p>{props.description}</p>
         <p className="preco">{props.price}</p>
       </div>
-      <div className="adicionar">
-        <Button>Adicionar</Button>
+      <div>
+        <Button/>
       </div>
-      ))
     </div>
   );
 }
