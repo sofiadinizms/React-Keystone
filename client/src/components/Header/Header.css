@@ -1,9 +1,13 @@
 .Header{
     width: 1400px;
-    height: 150px;
-    position: absolute;
-    justify-content: space-between;
-    align-items: center;
-    top: 20px;
-    left: 20px;
+    margin-bottom: 100px;
+    
+}
+
+.Header img{
+    margin-left: 50px;
+    max-height: 100px;
+    height: 100%;
+    max-width: 380px;
+    width: 100%;
 }

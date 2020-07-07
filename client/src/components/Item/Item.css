@@ -1,0 +1,21 @@
+img{
+    height: 150px;
+    width: 190px;
+    margin-left: 35px;
+    margin-top: 20px;
+}
+
+.Item{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px #000000;
+}
+
+.preco {
+    font: Bold 34px/36px Montserrat;
+}
+
+.ItemInfo{
+    margin-right: 50px;
+}
+

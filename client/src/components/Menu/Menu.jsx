@@ -1,19 +1,58 @@
-import React, { Component } from 'react';
-import '.\\Menu.css';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Items from "../Item";
+import ".\\Menu.css";
+import ItemCardapio from '../Item';
 
-function Menu(){
+let initial = [];
+
+function Menu(props){
+    const[items, setItems] = useState ([]);
+    const loadItems = async () => {
+        const res = await axios.get('http://localhost:3001/api/item');
+        setItems(res.data);
+    };
+
+    useEffect(() => {
+        loadItems();
+    }, []);
+
+    const search = (e) => {
+        const searchName = e.target.value;
+        const addedItems = initial.filter((element) => {
+            return element.title.toLowerCase().includes(searchName.toLowerCase());
+        });
+        setItems(addedItems);
+    
+    };
+    
     return(
-        <div className="flex-container">
-            <div id="classico">
-                <div id="classico-imagem">
-                    <img>
-                </div>
-                <div id="classico-info">
-                    <h2>Hot dog clássico</h2>
-                    <p>Pão e salsicha do jeito que você já conhece e saboroso como você nunca viu</p>
-                    <p class="preco"> R$8,00</p>
-        </div>
+        <main>
+            <div className = "CardapioSearch">
+                <h1>Cardápio</h1>
+                <input className = "SearchBar" type = "text" onChange = { search } />
+            </div>
+            <div className ="Flex-container">
+                {items.map((Item) =>{
+                    return (
+                        <ItemCardapio
+                            key = {Items._id}
+                            title = {Items.title} 
+                            description = {Items.description}
+                            price = {Items.price}
+                            image = {Items.image}
+                        />
+                    );
+                })}
+            </div>
+        </main>
+        
+
     );
 }
 
 export default Menu;
+
+
+    
+    

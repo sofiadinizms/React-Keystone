@@ -3,18 +3,18 @@ import ReactDOM from 'react-dom';
 import '.\\style.css'
 
 import {
-  Example,
-  Button,
-  Header
+  Menu,
+  Header,
+  Footer
 } from '.\\components';
 
 
 function App() {
   return (
     <section className="app">
-      <Example />
       <Header></Header>
-      <Button></Button>
+      <Menu></Menu>
+      <Footer></Footer>
     </section>
   );
 }
