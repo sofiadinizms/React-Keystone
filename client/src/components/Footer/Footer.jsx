@@ -4,7 +4,7 @@ import ".\\Footer.css";
 function Footer(){
     return(
     <div id="footer">
-        <p>Made with <strong><i className="fa fa-code"></i> </strong> and 🖤 CITi </p>
+        <p>Made with &#60; &#47; &#62; and 🖤 CITi </p>
     </div>
     );
 }
